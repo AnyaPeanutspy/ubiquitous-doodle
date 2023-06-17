@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include the Google Analytics tracking code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        // Initialize Google Analytics with your tracking ID
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <!-- Your website content here -->
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample web page.</p>
+
+    <!-- Trigger a page view event -->
+    <script>
+        // Send a page view event to Google Analytics
+        gtag('event', 'page_view', {
+            'send_to': 'YOUR_TRACKING_ID',
+            'page_title': document.title,
+            'page_location': window.location.href,
+            'page_path': window.location.pathname
+        });
+    </script>
+</body>
+</html>
